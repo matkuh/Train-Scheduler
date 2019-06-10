@@ -15,3 +15,27 @@ var firebaseConfig = {
   var firstTrainTime= "";
   var frequency = "";
   
+  $("#submit-btn").on("click", function(event){
+    event.preventDefault();
+    trainName = $("#train-name").val().trim();
+    destination = $("#train-dest").val().trim();
+    firstTrainTime = $("#first-train").val().trim();
+    frequency = $("#frequency-input").val().trim();
+      console.log(trainName);
+      console.log(destination);
+      console.log(firstTrainTime);
+      console.log(frequency);
+    database.ref().push({
+        trainName: trainName,
+        destination: destination,
+        firstTrainTime: firstTrainTime,
+        frequency: frequency,
+    });
+});
+
+database.ref().on("child_added", function(Childsnapshot){
+  $(".train-info").append("<tr><td>" +Childsnapshot.val().trainName +"</td><td>" +Childsnapshot.val().destination +"</td><td>"
+  +Childsnapshot.val().frequency +"</td><td></td><td>" + Childsnapshot.val().rateA +"</td></tr>");
+}, function(errorObject) {
+    console.log("Errors handled: " +errorObject.code);
+});
