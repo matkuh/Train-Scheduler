@@ -11,3 +11,7 @@ body {
 #submit-btn {
     background-color: black;
 }
+.thead {
+    font-size: 20px;
+    font-weight: bold;
+}
