@@ -1,6 +1,6 @@
 # Train-Scheduler
 
-# Deployed Site
+### Deployed Site
 
 https://matkuh.github.io/Train-Scheduler/
 
