@@ -1,5 +1,9 @@
 # Train-Scheduler
 
+# Deployed Site
+
+https://matkuh.github.io/Train-Scheduler/
+
 <img src="assets/images/trainss.png" width=600 height=400>
 
 ### I created a train application where the user can input their train name, destination, time and frequency. The info is then stored on firebase's realtime database, displayed on the html from the database, and then calculates the time of the next train and minutes away with moment.js.
